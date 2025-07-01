@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { useState } from 'react'
 
-const page = () => {
+const Page = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggle = () => {
     setMenuOpen(!menuOpen)
@@ -44,7 +44,7 @@ const page = () => {
           <div className='md:flex justify-between gap-5 md:pt-5'>
             <div className='md:pt-10 text-center md:text-start'>
               <p className='text-white text-xl font-semibold pt-4 lg:pt-5'>My name is Muraina Ayodeji</p>
-              <p className='text-white text-3xl md:text-4xl lg:text-5xl font-semibold py-8 md:py-10'>I'M A FRONT-END DEVELOPER</p>
+              <p className='text-white text-3xl md:text-4xl lg:text-5xl font-semibold py-8 md:py-10'>I&apos;M A FRONT-END DEVELOPER</p>
               <div className='pb-5'>
                 <button className='bg-gray-500 w-full md:w-auto outline outline-white text-white font-medium px-3 py-1'>Contact me</button>
               </div>
@@ -68,4 +68,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
