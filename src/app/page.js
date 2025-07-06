@@ -23,28 +23,24 @@ const Page = () => {
             </ul>
           </div>
           {/* Small screen nav */}
-          <div className='flex justify-between md:hidden py-4 px-4 items-center'>
+          <div className='flex justify-between md:hidden py-2 px-4 items-center shadow-lg'>
             <p className='text-white text-[27px] font-bold'>AY</p>
             <button onClick={toggle}>
               {menuOpen ? (<Image src="/Images/close-ham.svg" width={35} alt="close" height={35} />) : <Image src="/Images/hamburger.svg" width={30} alt="open" height={30} />}
             </button>
           </div>
           {menuOpen && (
-            <div className='bg-white shadow-lg rounded-md '>
-              <ul className='text-lg px-2 py-3 space-y-2'>
-                <li><Link href="" className=' text-black font-semibold'>Home</Link></li>
-                <hr />
-                <li><Link href="" className=' text-black font-semibold'>Portfolio</Link></li>
-                <hr />
-                <li><Link href="" className=' text-black font-semibold'>About me</Link></li>
-                <hr />
-                <li><Link href="" className=' text-black font-semibold'>Contact</Link></li>
-
+            <div className='rounded-md'>
+              <ul className='text-lg px-2 text-white text-center bg-black/50 py-3 space-y-2'>
+                <li><Link href="" className='  font-semibold'>Home</Link></li>
+                <li><Link href="" className='  font-semibold'>Portfolio</Link></li>
+                <li><Link href="" className='  font-semibold'>About me</Link></li>
+                <li><Link href="" className='  font-semibold'>Contact</Link></li>
               </ul>
             </div>
           )}
         </nav>
-        <section className='px-7 md:px-18 lg:px-[120px] md:pt-5'>
+        <section className='px-7 md:px-18 lg:px-[120px] pt-5 md:pt-5'>
           <div className='md:flex justify-between gap-5 md:pt-5'>
             <div className='md:pt-10 text-center md:text-start'>
               <p className='text-white text-xl font-semibold pt-4 lg:pt-5'>My name is Muraina Ayodeji</p>
@@ -77,7 +73,7 @@ const Page = () => {
               I&apos;m open to freelance, collaboration, or full-time opportunities — feel free to check out my work or get in touch.
             </p>
           </div>
-          <div className='lg:flex space-y-5 gap-4 py-10'>
+          <div className='lg:flex space-y-5 lg:space-y-0 gap-4 py-10'>
             {/* First card */}
             <div className='border border-white px-4 md:px-3 py-4 md:py-6 lg:py-3 flex items-center md:gap-2'>
               <div className='relative hidden md:block md:w-50 md:h-16'>
@@ -91,19 +87,6 @@ const Page = () => {
               </div>
             </div>
 
-            {/* <div className='border border-white px-4 md:px-3 py-4 md:py-6 lg:py-3 flex items-center md:gap-2'>
-              <div className='relative hidden md:block md:w-50 md:h-16'>
-                <Image className='' src="/Images/bracket.svg" fill alt="close" />
-              </div>
-              <div className='space-y-2 md:space-y-1'>
-                <p className='font-bold text-2xl text-white'>Development</p>
-                <p className='text-white font-medium text-[15px]'>
-                  I build responsive and functional websites from the ground up or based on your existing design. Clean code and user-first experiences are my priority.
-                </p>
-              </div>
-            </div> */}
-
-            
             {/* Second card */}
             <div className='border border-white px-4 md:px-3 py-4 md:py-6 lg:py-2 flex items-center md:gap-2'>
               <div className='relative hidden md:block md:w-50 md:h-16'>
@@ -116,19 +99,63 @@ const Page = () => {
                 </p>
               </div>
             </div>
-
-
-            {/* <div className='border border-white px-3 py-3 flex items-center gap-2'>
-              <div className='relative w-12 h-12  md:w-50 md:h-16'>
-                <Image className='' src="/Images/wrench.svg" fill alt="close" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card 1 */}
+            <div className="flex flex-col md:flex-row border border-gray-300 rounded-xl overflow-hidden shadow-lg bg-white">
+              <div className="md:w-1/2 w-full h-60 md:h-auto relative">
+                <Image
+                  src="/Images/project1.jpg"
+                  alt="Project 1"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div>
-                <p className='font-bold text-2xl text-white'>Maintenance</p>
-                <p className='text-white font-medium text-[15px] pt-1'>
-                  I troubleshoot bugs, improve performance, and introduce new features as your site evolves — ensuring everything stays modern and optimized.
-                </p>
+              <div className="p-6 md:w-1/2 flex flex-col justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-2">Project 1</h2>
+                  <p className="text-gray-600 mb-4">
+                    A responsive portfolio website built with Next.js and Tailwind CSS.
+                  </p>
+                </div>
+                <div className="flex gap-3">
+                  <Link href="/projects/project-1">
+                    <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">View</button>
+                  </Link>
+                  <a href="https://github.com/yourusername/project-1" target="_blank" rel="noopener noreferrer">
+                    <button className="border border-black text-black px-4 py-2 rounded hover:bg-gray-100 transition">GitHub</button>
+                  </a>
+                </div>
               </div>
-            </div> */}
+            </div>
+
+            {/* Card 2 */}
+            <div className="flex flex-col md:flex-row border border-gray-300 rounded-xl overflow-hidden shadow-lg bg-white">
+              <div className="md:w-1/2 w-full h-60 md:h-auto relative">
+                <Image
+                  src="/Images/project2.jpg"
+                  alt="Project 2"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:w-1/2 flex flex-col justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-2">Project 2</h2>
+                  <p className="text-gray-600 mb-4">
+                    A task management app built with React, Node.js, and MongoDB.
+                  </p>
+                </div>
+                <div className="flex gap-3">
+                  <Link href="/projects/project-2">
+                    <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">View</button>
+                  </Link>
+                  <a href="https://github.com/yourusername/project-2" target="_blank" rel="noopener noreferrer">
+                    <button className="border border-black text-black px-4 py-2 rounded hover:bg-gray-100 transition">GitHub</button>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
         </section>
